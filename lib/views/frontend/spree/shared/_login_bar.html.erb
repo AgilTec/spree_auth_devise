@@ -1,6 +1,7 @@
 <% if spree_current_user %>
-  <li><%= link_to Spree.t(:my_account), spree.account_path %></li>
-  <li><%= link_to Spree.t(:logout), spree.logout_path %></li>
+  <li id="link-to-my-account"><%= link_to Spree.t(:my_account), spree.account_path %></li>
+  <li id="link-to-logout"><%= link_to Spree.t(:logout), spree.logout_path %></li>
 <% else %>
   <li id="link-to-login"><%= link_to Spree.t(:login), spree.login_path %></li>
 <% end %>
+<div data-hook="login_below_password_fields"></div>
